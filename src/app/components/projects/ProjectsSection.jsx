@@ -26,7 +26,7 @@ const projectsData = [
   {
     id: 3,
     title: 'OldPhoneTrade',
-    description: 'An second-hand mobile phones trading website, enabling users to buy and sell used mobile devices easily online.',
+    description: 'A second-hand mobile phones trading website, enabling users to buy and sell used mobile devices easily online.',
     image: '/images/projects/3.png',
     tag: ['All Projects', 'Web Platform'],
     gitUrl: 'https://github.com/Lu-Whale/OldPhoneSalesPlatform',
