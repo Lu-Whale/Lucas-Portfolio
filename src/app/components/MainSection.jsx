@@ -16,11 +16,11 @@ const MainSection = () => {
                 className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
             >
                 <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-secondary-500">
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-pink-400">
                         Hi, I&apos;m Jingyu (Lucas){" "}
                     </span>
                 </h1>
-                <h2 className="text-white text-2xl sm:text-3xl lg:text-5xl font-semibold mb-6">
+                <h2 className="text-white text-2xl sm:text-3xl lg:text-5xl font-bold mb-6">
                     <TypeAnimation
                         sequence={[
                             "Software Engineer",
@@ -39,15 +39,13 @@ const MainSection = () => {
                 </h2>
                 <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
                     Driven Software Engineer with a deep passion for innovation and lifelong learning.
-                    I aim to leverage cutting-edge technology to craft software solutions that benefit society.
-                    Committed to excellence and continuous growth, I aspire to transform even a fragment of the future through impactful software projects.
+                    I enjoy seeing my technical learning come alive in commercial projects.
                 </p>
           <div>
             <Link
               href="/#contact"
               className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white"
             >
-                {/* eslint-disable-next-line react/no-unescaped-entities */}
               Let&apos;s Connect
             </Link>
             <Link
