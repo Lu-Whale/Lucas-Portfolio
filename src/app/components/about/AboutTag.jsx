@@ -6,7 +6,7 @@ const variants = {
   active: { width: 'calc(100% - 0.75rem)' }
 }
 
-const TabButton = ({ active, selectTab, children }) => {
+const AboutTag = ({ active, selectTab, children }) => {
   const buttonClasses = active ? 'text-write' : 'text-[#ADB7BE]'
 
   return (
@@ -23,4 +23,4 @@ const TabButton = ({ active, selectTab, children }) => {
   )
 }
 
-export default TabButton
+export default AboutTag

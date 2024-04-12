@@ -1,6 +1,6 @@
 'use client'
 import React, { useTransition, useState } from 'react'
-import TabButton from './TabButton'
+import AboutTag from './AboutTag'
 
 const TAB_DATA = [
   {
@@ -112,18 +112,18 @@ const AboutSection = () => {
           I also prioritize clear and effective communication to ensure mutual understanding
         </p>
         <div className='flex flex-row justify-center text-2xl mt-8 space-x-20'>
-          <TabButton
+          <AboutTag
             selectTab={() => handleTabChange('Technical Skills')}
             active={tab === 'Technical Skills'}
           >
             Tech Skills
-          </TabButton>
-          <TabButton
+          </AboutTag>
+          <AboutTag
             selectTab={() => handleTabChange('education')}
             active={tab === 'education'}
           >
             Education
-          </TabButton>
+          </AboutTag>
         </div>
         <div className='mt-8'>
           {TAB_DATA.find((t) => t.id === tab).content}
