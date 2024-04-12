@@ -3,10 +3,10 @@ import Link from "next/link";
 import React, { useState } from "react";
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
-import MenuOverlay from "./MenuOverlay";
+import NavMenuOverlay from "./NavMenuOverlay";
 import Image from "next/image";
-import GithubIcon from "../../../public/github-icon.svg";
-import LinkedinIcon from "../../../public/linkedin-icon.svg";
+import GithubIcon from "../../../../public/github-icon.svg";
+import LinkedinIcon from "../../../../public/linkedin-icon.svg";
 
 const navLinks = [
   {
@@ -70,7 +70,7 @@ const Navbar = () => {
           </Link>
         </div>
       </div>
-      {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
+      {navbarOpen ? <NavMenuOverlay links={navLinks} /> : null}
 
     </nav>
 
