@@ -15,9 +15,12 @@ const MainSection = () => {
                  transition={{ duration: 0.5 }}
                 className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
             >
-                <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
+                <h1 className="mb-4 text-4xl sm:text-5xl lg:text-7xl lg:leading-normal font-extrabold">
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-pink-400">
-                        Hi, I&apos;m Jingyu (Lucas){" "}
+                        Hi, I&apos;m Jingyu {" "}
+                    </span>
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-pink-400 text-2xl sm:text-3xl lg:text-4xl ">
+                        (Lucas)
                     </span>
                 </h1>
                 <h2 className="text-white text-2xl sm:text-3xl lg:text-5xl font-bold mb-6">
@@ -37,8 +40,10 @@ const MainSection = () => {
                         repeat={Infinity}
                     />
                 </h2>
-                <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
+                <p className="text-[#ADB7BE] text-base sm:text-lg lg:text-xl">
                     Driven Software Engineer with a deep passion for innovation and lifelong learning.
+                </p>
+                <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
                     I enjoy seeing my technical learning come alive in commercial projects.
                 </p>
           <div>
@@ -66,11 +71,11 @@ const MainSection = () => {
         >
           <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
             <Image
-              src="/images/hero-image.png"
-              alt="hero image"
+              src="/images/avatar.png"
+              alt="avatar image"
               className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              width={300}
-              height={300}
+              width={290}
+              height={290}
             />
           </div>
         </motion.div>
