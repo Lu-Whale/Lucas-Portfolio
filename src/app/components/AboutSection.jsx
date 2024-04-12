@@ -85,7 +85,7 @@ const TAB_DATA = [
 
 const AboutSection = () => {
   const [tab, setTab] = useState('Technical Skills')
-  const [isPending, startTransition] = useTransition()
+  const [_, startTransition] = useTransition()
 
   const handleTabChange = (id) => {
     startTransition(() => {
