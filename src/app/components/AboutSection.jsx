@@ -1,94 +1,136 @@
-"use client";
-import React, { useTransition, useState } from "react";
-import Image from "next/image";
-import TabButton from "./TabButton";
+'use client'
+import React, { useTransition, useState } from 'react'
+import TabButton from './TabButton'
 
 const TAB_DATA = [
   {
-    title: "Skills",
-    id: "skills",
+    title: 'Technical Skills',
+    id: 'Technical Skills',
     content: (
-      <ul className="list-disc pl-2">
-        <li>Node.js</li>
-        <li>Express</li>
-        <li>PostgreSQL</li>
-        <li>Sequelize</li>
-        <li>JavaScript</li>
-        <li>React</li>
-      </ul>
-    ),
+      <div>
+        <div className='flex flex-wrap gap-3'>
+          <h3
+            className='text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500 text-1xl font-semibold mb-4'>
+            Languages:
+          </h3>
+          <span>Java, </span>
+          <span>JavaScript, </span>
+          <span>Python, </span>
+          <span>C++, </span>
+          <span>SQL</span>
+        </div>
+        <div className='flex flex-wrap gap-3'>
+          <h3
+            className='text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500 text-1xl font-semibold mb-4'>
+            Backend:
+          </h3>
+          <span>Spring Boot, </span>
+          <span>Node.js, </span>
+          <span>Express, </span>
+          <span>Redis, </span>
+          <span>Mybatis, </span>
+          <span>MySQL, </span>
+          <span>MongoDB, </span>
+          <span>RESTful API</span>
+        </div>
+        <div className='flex flex-wrap gap-3'>
+          <h3
+            className='text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500 text-1xl font-semibold mb-4'>Frontend:</h3>
+          <span>React, </span>
+          <span>jQuery, </span>
+          <span>Ajax, </span>
+          <span>HTML, </span>
+          <span>CSS, </span>
+          <span>Jest </span>
+        </div>
+        <div className='flex flex-wrap gap-3'>
+          <h3
+            className='text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500 text-1xl font-semibold mb-4'>Cloud
+            & DevOps:</h3>
+          <span>AWS (EC2, RDS, DynamoDB, S3, VPC), </span>
+          <span>Docker, </span>
+          <span>Git, </span>
+          <span>CI/CD</span>
+        </div>
+      </div>
+    )
   },
   {
-    title: "Education",
-    id: "education",
+    title: 'Education',
+    id: 'education',
     content: (
-      <ul className="list-disc pl-2">
-        <li>University of Sydney</li>
-        <li>University of California, Santa Cruz</li>
-      </ul>
-    ),
+      <div>
+        <h3
+          className='text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500 text-2xl font-semibold mb-2'>
+          The University of Sydney
+        </h3>
+        <ul className='list-disc pl-2 mb-4'>
+          <li>Master of IT & Master of IT Management specialised in Software Engineering</li>
+          <li>Graduated with Distinction</li>
+          <li>Listed in Postgraduate High Honour Roll</li>
+          <li>Ranked 1st in ‘Data Structures and Algorithms’ and ‘Object-Oriented-Programming’ units</li>
+        </ul>
+
+        <h3
+          className='text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500 text-2xl font-semibold mb-2'>
+          Beijing institute of Technology
+        </h3>
+        <ul className='list-disc pl-2'>
+          <li>Bachelor of Science in Computer Science</li>
+        </ul>
+      </div>
+    )
   },
-  {
-    title: "Certifications",
-    id: "certifications",
-    content: (
-      <ul className="list-disc pl-2">
-        <li>AWS Cloud Practitioner</li>
-        <li>Google Professional Cloud Developer</li>
-      </ul>
-    ),
-  },
-];
+]
 
 const AboutSection = () => {
-  const [tab, setTab] = useState("skills");
-  const [isPending, startTransition] = useTransition();
+  const [tab, setTab] = useState('Technical Skills')
+  const [isPending, startTransition] = useTransition()
 
   const handleTabChange = (id) => {
     startTransition(() => {
-      setTab(id);
-    });
-  };
+      setTab(id)
+    })
+  }
 
   return (
-    <section className="text-white" id="about">
-      <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src="/images/about-image.png" width={500} height={500} />
-        <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-pink-900 text-4xl font-bold  mb-4">About Me</h2>
-          <p className="text-base lg:text-lg">
-            Constructing....
-          </p>
-          <div className="flex flex-row justify-start mt-8">
-            <TabButton
-              selectTab={() => handleTabChange("skills")}
-              active={tab === "Tech skills"}
-            >
-              {" "}
-              Skills{" "}
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("education")}
-              active={tab === "education"}
-            >
-              {" "}
-              Education{" "}
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("certifications")}
-              active={tab === "certifications"}
-            >
-              {" "}
-              Certifications{" "}
-            </TabButton>
-          </div>
-          <div className="mt-8">
-            {TAB_DATA.find((t) => t.id === tab).content}
-          </div>
+    <section className='text-white' id='about'>
+      <div className='px-4 py-8 xl:px-16 sm:py-16 text-left flex flex-col h-full'>
+        <h2
+          className='text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-sky-400 text-center text-4xl font-semibold mb-4'>
+          About Me
+        </h2>
+        <p className='text-[#ADB7BE] text-base lg:text-lg mb-2'>
+          As a recent graduate software engineer, I aim to leverage cutting-edge technology to craft software solutions
+          that benefit society.
+          Committed to excellence and continuous growth, I aspire to transform even a fragment of the future through
+          impactful software projects.
+        </p>
+        <p className='text-[#ADB7BE] text-base lg:text-lg'>
+          I embrace diversity and thrive as a team player in collaborative settings.
+          My adaptable and optimistic approach helps me handle changes effectively.
+          I also prioritize clear and effective communication to ensure mutual understanding
+        </p>
+        <div className='flex flex-row justify-center text-2xl mt-8 space-x-20'>
+          <TabButton
+            selectTab={() => handleTabChange('Technical Skills')}
+            active={tab === 'Technical Skills'}
+          >
+            Tech Skills
+          </TabButton>
+          <TabButton
+            selectTab={() => handleTabChange('education')}
+            active={tab === 'education'}
+          >
+            Education
+          </TabButton>
+        </div>
+        <div className='mt-8'>
+          {TAB_DATA.find((t) => t.id === tab).content}
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default AboutSection;
+export default AboutSection
