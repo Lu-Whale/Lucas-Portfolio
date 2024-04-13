@@ -50,7 +50,7 @@ const ProjectsSection = () => {
   }
 
   return (
-    <section id='projects'>
+    <section className='text-white mb-40' id='projects'>
       <h2
         className='text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-sky-400 text-center text-4xl font-bold  mt-4 mb-8 md:mb-10'>
         My Projects
