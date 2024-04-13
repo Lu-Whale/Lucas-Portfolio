@@ -2,10 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+#about, #projects, #contact {
+  scroll-margin-top: 100px;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 @media (prefers-color-scheme: dark) {

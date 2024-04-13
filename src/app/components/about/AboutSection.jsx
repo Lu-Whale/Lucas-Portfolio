@@ -1,6 +1,6 @@
-'use client'
-import React, { useTransition, useState } from 'react'
-import AboutTag from './AboutTag'
+'use client';
+import React, { useTransition, useState } from 'react';
+import AboutTag from './AboutTag';
 
 const TAB_DATA = [
   {
