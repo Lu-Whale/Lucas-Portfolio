@@ -4,9 +4,7 @@ import React, { useState } from "react";
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import NavMenuOverlay from "./NavMenuOverlay";
-import Image from "next/image";
-import GithubIcon from "../../../../public/github-icon.svg";
-import LinkedinIcon from "../../../../public/linkedin-icon.svg";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 const navLinks = [
   {
@@ -61,13 +59,13 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-        <div className="socials flex flex-row gap-2">
-          <Link href="https://github.com/Lu-Whale">
-            <Image src={GithubIcon} alt="Github Icon" />
-          </Link>
-          <Link href="https://www.linkedin.com/in/lucas-jingyu-lu/">
-            <Image src={LinkedinIcon} alt="Linkedin Icon" />
-          </Link>
+        <div className="flex items-center">
+          <a href="https://github.com/Lu-Whale" className="mr-4">
+            <FaGithub size={30} />
+          </a>
+          <a href="https://www.linkedin.com/in/lucas-jingyu-lu/" className="mr-4">
+            <FaLinkedin size={30} />
+          </a>
         </div>
       </div>
       {navbarOpen ? <NavMenuOverlay links={navLinks} /> : null}
