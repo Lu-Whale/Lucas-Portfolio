@@ -34,16 +34,16 @@ const Footer = () => {
           <a href="https://github.com/Lu-Whale" className="mr-4">
             <FaGithub size={30} />
           </a>
-          <a href="https://www.linkedin.com/in/lucas-jingyu-lu/" className="mr-4">
+          <a href="@/app/components/footer/Footer" className="mr-4">
             <FaLinkedin size={30} />
           </a>
         </div>
 
         <div>
           <nav>
-            <a href="/" className="mr-4">Home</a>
-            <a href="#about" className="mr-4">About</a>
-            <a href="#projects" className="mr-4">Projects</a>
+            <a href="/public" className="mr-4">Home</a>
+            <a href="@/app/components/footer/Footer#about" className="mr-4">About</a>
+            <a href="@/app/components/footer/Footer#projects" className="mr-4">Projects</a>
           </nav>
         </div>
 
