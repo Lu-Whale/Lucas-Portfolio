@@ -74,7 +74,7 @@ const TAB_DATA = [
 
         <h3
           className='text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500 text-2xl font-semibold mb-2'>
-          Beijing institute of Technology
+          Beijing Institute of Technology
         </h3>
         <ul className='list-disc pl-2'>
           <li>Bachelor of Science in Computer Science</li>
