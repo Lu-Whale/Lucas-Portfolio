@@ -11,7 +11,6 @@ const projectsData = [
     description: 'A open-source package crafted to facilitate seamless and precise thermophysiological calculations in JavaScript.',
     image: '/images/projects/1.png',
     tag: ['All Projects', 'Open Source'],
-    gitUrl: 'https://github.com/FedericoTartarini/jsthermalcomfort',
     previewUrl: 'https://github.com/FedericoTartarini/jsthermalcomfort'
   },
   {
@@ -20,7 +19,6 @@ const projectsData = [
     description: 'A social media site expected to help pet owners to find more friends in their local community.',
     image: '/images/projects/2.png',
     tag: ['All Projects', 'Web Platform'],
-    gitUrl: 'https://github.com/Lu-Whale/AnimalCare',
     previewUrl: 'https://github.com/Lu-Whale/AnimalCare'
   },
   {
@@ -29,7 +27,6 @@ const projectsData = [
     description: 'A second-hand mobile phones trading website, enabling users to buy and sell used mobile devices easily online.',
     image: '/images/projects/3.png',
     tag: ['All Projects', 'Web Platform'],
-    gitUrl: 'https://github.com/Lu-Whale/OldPhoneSalesPlatform',
     previewUrl: 'https://github.com/FedericoTartarini/jsthermalcomfort'
   }
 ]
@@ -94,7 +91,6 @@ const ProjectsSection = () => {
               title={project.title}
               description={project.description}
               imgUrl={project.image}
-              gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
             />
           </motion.li>
