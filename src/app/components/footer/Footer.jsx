@@ -1,18 +1,4 @@
-// import React from "react";
-//
-// const Footer = () => {
-//   return (
-//     <footer className="footer border z-10 border-t-[#33353F] border-l-transparent border-r-transparent text-white">
-//       <div className="container p-12 flex justify-between">
-//         <span>Lucas</span>
-//         <p className="text-slate-600">All rights reserved.</p>
-//       </div>
-//     </footer>
-//   );
-// };
-//
-// export default Footer;
-
+'use client';
 import React from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
@@ -22,25 +8,24 @@ const Footer = () => {
 
   return (
     <footer className="footer border z-10 border-t-[#33353F] border-l-transparent border-r-transparent text-white">
-      <div className="container p-12 flex justify-between items-center">
+      <div className="container p-4 md:p-12 flex flex-col md:flex-row justify-between items-center">
          {/*Personal and contact section */}
-        <div>
+        <div className="mb-4 md:mb-0">
           <p>Jingyu (Lucas) Lu</p>
           <a href={email}>lujingyu2919@gmail.com</a>
         </div>
 
         {/* Social media icons */}
-        <div className="flex items-center">
+        <div className="flex items-center mb-4 md:mb-0">
           <a href="https://github.com/Lu-Whale" className="mr-4">
             <FaGithub size={30} />
           </a>
-          <a href="@/app/components/footer/Footer" className="mr-4">
+          <a href="https://www.linkedin.com/in/lucas-jingyu-lu/">
             <FaLinkedin size={30} />
           </a>
         </div>
-
         <div>
-          <nav>
+          <nav className="mb-4 md:mb-0 text-center md:text-left">
             <a href="/public" className="mr-4">Home</a>
             <a href="@/app/components/footer/Footer#about" className="mr-4">About</a>
             <a href="@/app/components/footer/Footer#projects" className="mr-4">Projects</a>
