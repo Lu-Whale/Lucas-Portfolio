@@ -37,6 +37,7 @@ const TAB_DATA = [
           <h3
             className='text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500 text-1xl font-semibold mb-4'>Frontend:</h3>
           <span>React, </span>
+          <span>Next.js, </span>
           <span>jQuery, </span>
           <span>Ajax, </span>
           <span>HTML, </span>
