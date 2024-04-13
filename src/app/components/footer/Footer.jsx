@@ -26,9 +26,9 @@ const Footer = () => {
         </div>
         <div>
           <nav className="mb-4 md:mb-0 text-center md:text-left">
-            <a href="/public" className="mr-4">Home</a>
-            <a href="@/app/components/footer/Footer#about" className="mr-4">About</a>
-            <a href="@/app/components/footer/Footer#projects" className="mr-4">Projects</a>
+            <a href="/" className="mr-4">Home</a>
+            <a href="#about" className="mr-4">About</a>
+            <a href="#projects" className="mr-4">Projects</a>
           </nav>
         </div>
 

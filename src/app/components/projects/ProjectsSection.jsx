@@ -55,7 +55,7 @@ const ProjectsSection = () => {
         className='text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-sky-400 text-center text-4xl font-bold  mt-4 mb-8 md:mb-10'>
         My Projects
       </h2>
-      <div className='text-white flex flex-row justify-center items-center gap-4 py-6 mb-6'>
+      <div className='text-white flex flex-row flex-wrap justify-center items-center gap-4 py-6 mb-6'>
         <ProjectTag
           onClick={handleTagChange}
           name='All Projects'
@@ -72,7 +72,6 @@ const ProjectsSection = () => {
           isSelected={tag === 'Open Source'}
         />
         <ProjectTag
-          onClick={handleTagChange}
           name='More Coming Soon...'
           isSelected={tag === 'More Coming Soon'}
         />
