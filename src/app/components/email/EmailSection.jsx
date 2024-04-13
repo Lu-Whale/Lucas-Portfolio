@@ -57,7 +57,7 @@ const EmailSection = () => {
           <a href='https://github.com/Lu-Whale' className='mr-4'>
             <FaGithub size={40} />
           </a>
-          <a href='https://www.linkedin.com/in/lucas-jingyu-lu/' className='mr-4'>
+          <a href='@/app/components/email/EmailSection' className='mr-4'>
             <FaLinkedin size={40} />
           </a>
         </div>
