@@ -1,6 +1,6 @@
-'use client';
-import React, { useTransition, useState } from 'react';
-import AboutTag from './AboutTag';
+'use client'
+import React, { useTransition, useState } from 'react'
+import AboutTag from './AboutTag'
 
 const TAB_DATA = [
   {
@@ -8,9 +8,9 @@ const TAB_DATA = [
     id: 'Technical Skills',
     content: (
       <div>
-        <div className='flex flex-wrap gap-3'>
+        <div className='flex flex-wrap gap-3 mb-2 md:mb-4'>
           <h3
-            className='text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500 text-1xl font-semibold mb-4'>
+            className='text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500 text-1xl font-semibold'>
             Languages:
           </h3>
           <span>Java, </span>
@@ -19,9 +19,9 @@ const TAB_DATA = [
           <span>C++, </span>
           <span>SQL</span>
         </div>
-        <div className='flex flex-wrap gap-3'>
+        <div className='flex flex-wrap gap-3 mb-2 md:mb-4'>
           <h3
-            className='text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500 text-1xl font-semibold mb-4'>
+            className='text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500 text-1xl font-semibold'>
             Backend:
           </h3>
           <span>Spring Boot, </span>
@@ -33,9 +33,11 @@ const TAB_DATA = [
           <span>MongoDB, </span>
           <span>RESTful API</span>
         </div>
-        <div className='flex flex-wrap gap-3'>
+        <div className='flex flex-wrap gap-3 mb-2 md:mb-4'>
           <h3
-            className='text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500 text-1xl font-semibold mb-4'>Frontend:</h3>
+            className='text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500 text-1xl font-semibold'>
+            Frontend:
+          </h3>
           <span>React, </span>
           <span>Next.js, </span>
           <span>jQuery, </span>
@@ -44,10 +46,11 @@ const TAB_DATA = [
           <span>CSS, </span>
           <span>Jest </span>
         </div>
-        <div className='flex flex-wrap gap-3'>
+        <div className='flex flex-wrap gap-3 mb-2 md:mb-4'>
           <h3
-            className='text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500 text-1xl font-semibold mb-4'>Cloud
-            & DevOps:</h3>
+            className='text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500 text-1xl font-semibold'>
+            Cloud & DevOps:
+          </h3>
           <span>AWS (EC2, RDS, DynamoDB, S3, VPC), </span>
           <span>Docker, </span>
           <span>Git, </span>
@@ -81,7 +84,7 @@ const TAB_DATA = [
         </ul>
       </div>
     )
-  },
+  }
 ]
 
 const AboutSection = () => {
