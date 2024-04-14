@@ -57,10 +57,10 @@ const EmailSection = () => {
         </p>
         <div className='flex items-center mt-6'>
           <a href='https://github.com/Lu-Whale' className='mr-4'>
-            <FaGithub size={40} />
+            <FaGithub size={40} style={{ color: 'white' }}/>
           </a>
           <a href='https://www.linkedin.com/in/lucas-jingyu-lu/' className='mr-4'>
-            <FaLinkedin size={40} />
+            <FaLinkedin size={40} style={{ color: 'white' }}/>
           </a>
         </div>
       </div>

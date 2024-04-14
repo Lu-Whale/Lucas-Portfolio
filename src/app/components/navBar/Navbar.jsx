@@ -63,10 +63,10 @@ const Navbar = () => {
         </div>
         <div className='flex items-center'>
           <a href='https://github.com/Lu-Whale' className='mr-4'>
-            <FaGithub size={30} />
+            <FaGithub size={30} style={{ color: 'white' }} />
           </a>
           <a href='https://www.linkedin.com/in/lucas-jingyu-lu/' className='mr-4'>
-            <FaLinkedin size={30} />
+            <FaLinkedin size={30} style={{ color: 'white' }} />
           </a>
         </div>
       </div>

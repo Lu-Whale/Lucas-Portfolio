@@ -17,10 +17,10 @@ const Footer = () => {
         {/* Social media icons */}
         <div className='flex items-center mb-4 md:mb-0'>
           <a href='https://github.com/Lu-Whale' className='mr-4'>
-            <FaGithub size={30} />
+            <FaGithub size={30} style={{ color: 'white' }} />
           </a>
           <a href='https://www.linkedin.com/in/lucas-jingyu-lu/'>
-            <FaLinkedin size={30} />
+            <FaLinkedin size={30} style={{ color: 'white' }} />
           </a>
         </div>
         <div>
