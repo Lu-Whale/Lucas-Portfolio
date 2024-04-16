@@ -17,9 +17,15 @@ export async function POST(req, res) {
         <>
           <h1>{subject}</h1>
           <p>Hi there,</p>
+          <p>&nbsp;</p>
           <p>This is Jingyu(Lucas), thank you for reaching out!</p>
+          <p>&nbsp;</p>
           <p>New message sent:</p>
           <p>{message}</p>
+          <p>&nbsp;</p>
+          <p>Best regards,</p>
+          <p>&nbsp;</p>
+          <p>Lucas</p>
         </>
       ),
     });

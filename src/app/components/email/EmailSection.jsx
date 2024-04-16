@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaEnvelopeSquare } from 'react-icons/fa'
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false)
@@ -55,12 +55,19 @@ const EmailSection = () => {
           I prioritize responding promptly to all messages.
           Thanks and looking forward to hearing from you!
         </p>
+        <p className='text-[#ADB7BE] mb-4 max-w-md'>
+          {' '}
+          Email: lujingyu2919@gmail.com
+        </p>
         <div className='flex items-center mt-6'>
           <a href='https://github.com/Lu-Whale' className='mr-4'>
-            <FaGithub size={40} style={{ color: 'white' }}/>
+            <FaGithub size={40} className='text-white hover:text-gray-400'/>
           </a>
           <a href='https://www.linkedin.com/in/lucas-jingyu-lu/' className='mr-4'>
-            <FaLinkedin size={40} style={{ color: 'white' }}/>
+            <FaLinkedin size={40} className='text-white hover:text-gray-400'/>
+          </a>
+          <a href='mailto:lujingyu2919@gmail.com' className='mr-4'>
+            <FaEnvelopeSquare size={40} className='text-white hover:text-gray-400'/>
           </a>
         </div>
       </div>

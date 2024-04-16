@@ -81,6 +81,7 @@ const TAB_DATA = [
         </h3>
         <ul className='list-disc pl-2'>
           <li>Bachelor of Science in Computer Science</li>
+          <li>Awarded Academic Scholarships consecutively in semesters(Top 5% of the batch) </li>
         </ul>
       </div>
     )
