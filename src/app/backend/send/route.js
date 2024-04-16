@@ -3,30 +3,27 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const fromEmail = process.env.FROM_EMAIL;
+const receiveEmail = process.env.RECEIVE_EMAIL;
 
 export async function POST(req, res) {
   const { email, subject, message } = await req.json();
-  console.log(email);
-  console.log(subject);
-  console.log(message);
 
   try {
     const data = await resend.emails.send({
       from: fromEmail,
-      to: [fromEmail, email],
-      subject: subject,
+      to: [receiveEmail, email],
+      subject: `Re: ${subject}`,
       react: (
         <>
-          <h1>{subject}</h1>
           <p>Hi there,</p>
-          <p>&nbsp;</p>
-          <p>This is Jingyu(Lucas), thank you for reaching out!</p>
-          <p>&nbsp;</p>
-          <p>Message sent:</p>
-          <p>{message}</p>
-          <p>&nbsp;</p>
+          <p></p>
+          <p>Thank you for reaching out. Below is the confirmation of the message you sent:</p>
+          <blockquote style={{ borderLeft: "2px solid #f0f0f0", marginLeft: 0, paddingLeft: "15px", fontStyle: "italic" }}>
+            <p>{message}</p>
+          </blockquote>
+          <p>I will get back to you as soon as possible.</p>
+          <p></p>
           <p>Best regards,</p>
-          <p>&nbsp;</p>
           <p>Lucas</p>
         </>
       ),
