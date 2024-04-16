@@ -13,7 +13,7 @@ const EmailSection = () => {
       message: e.target.message.value
     }
     const JSONdata = JSON.stringify(data)
-    const endpoint = '/api/send'
+    const endpoint = '/backend/send'
 
     // Form the request for sending data to the server.
     const options = {
@@ -29,6 +29,7 @@ const EmailSection = () => {
 
     const response = await fetch(endpoint, options)
     const resData = await response.json()
+    console.log(resData);
 
     if (response.status === 200) {
       console.log('Message sent.')
@@ -73,8 +74,8 @@ const EmailSection = () => {
       </div>
       <div>
         {emailSubmitted ? (
-          <p className='text-green-500 text-sm mt-2'>
-            Email sent successfully!
+          <p className='flex justify-center text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-pink-500 text-sm md:text-2xl mt-2'>
+            Email sent successfully, thank you!
           </p>
         ) : (
           <form className='flex flex-col' onSubmit={handleSubmit}>

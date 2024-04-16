@@ -6,7 +6,9 @@ const fromEmail = process.env.FROM_EMAIL;
 
 export async function POST(req, res) {
   const { email, subject, message } = await req.json();
-  console.log(email, subject, message);
+  console.log(email);
+  console.log(subject);
+  console.log(message);
 
   try {
     const data = await resend.emails.send({
@@ -20,7 +22,7 @@ export async function POST(req, res) {
           <p>&nbsp;</p>
           <p>This is Jingyu(Lucas), thank you for reaching out!</p>
           <p>&nbsp;</p>
-          <p>New message sent:</p>
+          <p>Message sent:</p>
           <p>{message}</p>
           <p>&nbsp;</p>
           <p>Best regards,</p>
