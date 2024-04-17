@@ -31,7 +31,8 @@ const EmailSection = () => {
     const resData = await response.json();
 
     if (response.status === 200) {
-      console.log('Message sent. Status:' + resData);
+      console.log('Message sent');
+      console.log(resData);
       setEmailSubmitted(true)
     }
   }
