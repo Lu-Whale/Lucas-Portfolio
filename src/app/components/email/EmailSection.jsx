@@ -4,9 +4,13 @@ import { FaGithub, FaLinkedin, FaEnvelopeSquare } from 'react-icons/fa'
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false)
+  const [submitLoading, setSubmitLoading] = useState(false)
+  const [submitFailed, setSubmitFailed] = useState(false)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    setSubmitLoading(true)
+
     const data = {
       email: e.target.email.value,
       subject: e.target.subject.value || 'No Subject',
@@ -27,13 +31,24 @@ const EmailSection = () => {
       body: JSONdata
     }
 
-    const response = await fetch(endpoint, options);
-    const resData = await response.json();
+    try {
+      const response = await fetch(endpoint, options)
+      const resData = await response.json()
 
-    if (response.status === 200) {
-      console.log('Message sent');
-      console.log(resData);
       setEmailSubmitted(true)
+      if (resData.status === 200) {
+        console.log(resData.status, 'Message sent')
+      } else {
+        console.log('Failed to send email')
+        console.log(resData)
+        setSubmitFailed(true)
+      }
+    } catch (error) {
+      setEmailSubmitted(true)
+      setSubmitFailed(true)
+      console.error('Failed to send message', error)
+    } finally {
+      setSubmitLoading(false)
     }
   }
 
@@ -58,80 +73,105 @@ const EmailSection = () => {
         </p>
         <p className='text-[#ADB7BE] mb-4 max-w-md'>
           {' '}
-          Email: lujingyu2919@gmail.com
+          Email:&nbsp;
+          <span className='bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-blue-500'>
+            lujingyu2919@gmail.com
+          </span>
         </p>
         <div className='flex items-center mt-6'>
           <a href='https://github.com/Lu-Whale' className='mr-4'>
-            <FaGithub size={40} className='text-white hover:text-gray-400'/>
+            <FaGithub size={40} className='text-white hover:text-gray-400' />
           </a>
           <a href='https://www.linkedin.com/in/lucas-jingyu-lu/' className='mr-4'>
-            <FaLinkedin size={40} className='text-white hover:text-gray-400'/>
+            <FaLinkedin size={40} className='text-white hover:text-gray-400' />
           </a>
           <a href='mailto:lujingyu2919@gmail.com' className='mr-4'>
-            <FaEnvelopeSquare size={40} className='text-white hover:text-gray-400'/>
+            <FaEnvelopeSquare size={40} className='text-white hover:text-gray-400' />
           </a>
         </div>
       </div>
       <div>
         {emailSubmitted ? (
-          <p className='flex justify-center text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-pink-500 text-sm md:text-2xl mt-2'>
-            Email sent successfully, thank you!
-          </p>
+          submitFailed ? (
+            <div className='flex justify-center mt-8'>
+              <p
+                className=' text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-500 text-sm md:text-1xl mb-4'>
+                Sorry, my email service is temporarily unavailable.
+                Please try again later or contact me directly at&nbsp;
+                <span className='bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500'>
+                  lujingyu2919@gmail.com
+                </span>
+                . I appreciate your patience.
+              </p>
+            </div>
+          ) : (
+            <p
+              className='flex justify-center text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-pink-500 text-sm md:text-2xl mt-8'>
+              Email sent successfully, thank you!
+            </p>
+          )
+
         ) : (
-          <form className='flex flex-col' onSubmit={handleSubmit}>
-            <div className='mb-6'>
-              <label
-                htmlFor='email'
-                className='text-white block mb-2 text-sm font-medium'
-              >
-                Your email
-              </label>
-              <input
-                name='email'
-                type='email'
-                id='email'
-                required
-                className='bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5'
-                placeholder='example@gmail.com'
-              />
+          submitLoading ? (
+            <div className='flex justify-center items-center mt-4'>
+              <div className='animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-blue-500'></div>
             </div>
-            <div className='mb-6'>
-              <label
-                htmlFor='subject'
-                className='text-white block text-sm mb-2 font-medium'
+          ) : (
+            <form className='flex flex-col' onSubmit={handleSubmit}>
+              <div className='mb-6'>
+                <label
+                  htmlFor='email'
+                  className='text-white block mb-2 text-sm font-medium'
+                >
+                  Your email
+                </label>
+                <input
+                  name='email'
+                  type='email'
+                  id='email'
+                  required
+                  className='bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5'
+                  placeholder='example@gmail.com'
+                />
+              </div>
+              <div className='mb-6'>
+                <label
+                  htmlFor='subject'
+                  className='text-white block text-sm mb-2 font-medium'
+                >
+                  Subject
+                </label>
+                <input
+                  name='subject'
+                  type='text'
+                  id='subject'
+                  className='bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5'
+                  placeholder='(Optional)'
+                />
+              </div>
+              <div className='mb-6'>
+                <label
+                  htmlFor='message'
+                  className='text-white block text-sm mb-2 font-medium'
+                >
+                  Message
+                </label>
+                <textarea
+                  name='message'
+                  id='message'
+                  required
+                  className='bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5'
+                  placeholder='Drop me a message here :)'
+                />
+              </div>
+              <button
+                type='submit'
+                className='bg-gradient-to-br from-blue-400 to-pink-500 hover:bg-primary-600 text-white hover:text-slate-800 font-medium py-2.5 px-5 rounded-lg w-full'
               >
-                Subject
-              </label>
-              <input
-                name='subject'
-                type='text'
-                id='subject'
-                className='bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5'
-                placeholder='(Optional)'
-              />
-            </div>
-            <div className='mb-6'>
-              <label
-                htmlFor='message'
-                className='text-white block text-sm mb-2 font-medium'
-              >
-                Message
-              </label>
-              <textarea
-                name='message'
-                id='message'
-                required
-                className='bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5'
-                placeholder='Drop me a message here :)'
-              />
-            </div>
-            <button
-              type='submit'
-              className='bg-gradient-to-br from-blue-400 to-pink-500 hover:bg-primary-600 text-white hover:text-slate-800 font-medium py-2.5 px-5 rounded-lg w-full'
-            >
-              Send Message
-            </button>
-          </form>
+                Send Message
+              </button>
+            </form>
+          )
         )}
       </div>
     </section>
