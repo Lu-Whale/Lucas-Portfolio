@@ -68,7 +68,7 @@ const MainSection = () => {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="col-span-4 place-self-center mt-4 lg:mt-0"
+          className="col-span-4 justify-center items-center mt-4 lg:mt-0"
         >
           <ResponsiveImage />
         </motion.div>
