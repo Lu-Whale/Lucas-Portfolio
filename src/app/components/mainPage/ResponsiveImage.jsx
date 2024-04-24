@@ -26,14 +26,14 @@ function ResponsiveImage() {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
-  const imageWidth = windowSize.width >= 1024 ? 290 : 180
-  const imageHeight = windowSize.width >= 1024 ? 290 : 180
+  const imageWidth = windowSize.width >= 1024 ? 360 : 200
+  const imageHeight = windowSize.width >= 1024 ? 360 : 200
 
   return (
     <Image
-      src='/images/avatar.png'
+      src='/images/avatar2.png'
       alt='avatar image'
-      className='absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 bg-[#181818] relative animate-profile-animate'
+      className='absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 bg-[#181818] relative animate-profile-animate will-change-transform will-change-box-shadow'
       width={imageWidth}
       height={imageHeight}
       layout='fixed'
