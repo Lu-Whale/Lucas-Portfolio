@@ -3,6 +3,7 @@ import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import ResponsiveImage from '@/app/components/mainPage/ResponsiveImage'
+import '../../globals.css';
 
 const MainSection = () => {
   const NavToContact = "#contact";
@@ -50,7 +51,7 @@ const MainSection = () => {
           <div>
             <Link
               href={NavToContact}
-              className="text-white px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:text-slate-800"
+              className="relative inline-block px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 text-white hover:text-slate-800 arrow-animate"
             >
               Let&apos;s Connect
             </Link>

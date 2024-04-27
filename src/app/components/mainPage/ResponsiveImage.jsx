@@ -26,8 +26,8 @@ function ResponsiveImage() {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
-  const imageWidth = windowSize.width >= 1024 ? 400 : 200
-  const imageHeight = windowSize.width >= 1024 ? 400 : 200
+  const imageWidth = windowSize.width >= 1024 ? 400 : 240
+  const imageHeight = windowSize.width >= 1024 ? 400 : 240
 
   return (
     <Image

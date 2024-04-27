@@ -36,3 +36,17 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.arrow-animate::after {
+  content: "->";
+  position: relative;
+  top: 50%;
+  right: -4px;
+  transform: translateY(-50%);
+  transition: right 0.3s ease;
+}
+
+.arrow-animate:hover::after {
+  right: -14px;
+}
+

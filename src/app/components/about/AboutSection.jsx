@@ -4,8 +4,8 @@ import AboutTag from './AboutTag'
 
 const TAB_DATA = [
   {
-    title: 'Technical Skills',
-    id: 'Technical Skills',
+    title: 'skills',
+    id: 'skills',
     content: (
       <div>
         <div className='flex flex-wrap gap-3 mb-2 md:mb-4'>
@@ -89,7 +89,7 @@ const TAB_DATA = [
 ]
 
 const AboutSection = () => {
-  const [tab, setTab] = useState('Technical Skills')
+  const [tab, setTab] = useState('skills')
   const [_, startTransition] = useTransition()
 
   const handleTabChange = (id) => {
@@ -118,8 +118,8 @@ const AboutSection = () => {
         </p>
         <div className='flex flex-row justify-center text-2xl mt-8 space-x-20'>
           <AboutTag
-            selectTab={() => handleTabChange('Technical Skills')}
-            active={tab === 'Technical Skills'}
+            selectTab={() => handleTabChange('skills')}
+            active={tab === 'skills'}
           >
             Tech Skills
           </AboutTag>
