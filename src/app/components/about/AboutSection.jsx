@@ -75,15 +75,6 @@ const TAB_DATA = [
           <li>Listed in Postgraduate High Honour Roll</li>
           <li>Ranked 1st in ‘Data Structures and Algorithms’ and ‘Object-Oriented-Programming’ units</li>
         </ul>
-
-        <h3
-          className='text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500 text-2xl font-semibold mb-2'>
-          Beijing Institute of Technology
-        </h3>
-        <ul className='list-disc pl-2'>
-          <li>Bachelor of Science in Computer Science</li>
-          <li>Awarded Academic Scholarships consecutively in semesters(Top 5% of the batch) </li>
-        </ul>
       </div>
     )
   }
