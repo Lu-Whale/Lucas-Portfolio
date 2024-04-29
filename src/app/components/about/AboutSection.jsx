@@ -1,6 +1,7 @@
 'use client'
 import React, { useTransition, useState } from 'react'
 import AboutTag from './AboutTag'
+import { FaSkiing, FaSuitcase } from 'react-icons/fa';
 
 const TAB_DATA = [
   {
@@ -88,13 +89,62 @@ const TAB_DATA = [
   }
 ]
 
+const TAB2_DATA = [
+  {
+    title: 'hobbies',
+    id: 'hobbies',
+    content: (
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+        <div className='rounded-lg shadow-lg bg-[#222] p-6'>
+          <FaSkiing size={40} className='text-white' />
+          <h5 className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-pink-600 text-xl font-medium mb-2'>Skiing</h5>
+          <p className='text-[#ADB7BE] mb-4'>
+            I am an avid skier who enjoys the thrill and challenge of navigating various terrains.
+            This hobby not only allows me to appreciate the breathtaking snowy landscapes but also sharpens my focus and coordination.
+            Skiing reflects my love for outdoor activities and demonstrates my enthusiasm for embracing challenges.
+          </p>
+        </div>
+        <div className='rounded-lg shadow-lg bg-[#222] p-6'>
+          <FaSuitcase size={40} className='text-white' />
+          <h5 className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-pink-600  text-xl font-medium mb-2'>Travelling</h5>
+          <p className='text-[#ADB7BE]'>
+            Traveling is a way for me to explore new cultures, cuisines, and environments, broadening my perspective and inspiring creativity.
+            Each journey enriches my understanding of the world, enhancing my adaptability and problem-solving skills.
+            These experiences fuel my innovation and help me approach tasks with a fresh, global viewpoint.
+          </p>
+        </div>
+      </div>
+    )
+  },
+  {
+    title: 'fun fact',
+    id: 'fun fact',
+    content: (
+      <div className='mt-8 grid grid-cols-1 md:grid-cols-2 gap-4'>
+        <p>
+          Constructing, Coming next week :)
+        </p>
+      </div>
+    )
+  }
+]
+
 const AboutSection = () => {
   const [tab, setTab] = useState('skills')
-  const [_, startTransition] = useTransition()
+  const [, startTransition] = useTransition()
 
   const handleTabChange = (id) => {
     startTransition(() => {
       setTab(id)
+    })
+  }
+
+  const [tab2, setTab2] = useState('hobbies')
+  const [, startTransition2] = useTransition()
+
+  const handleTabChange2 = (id) => {
+    startTransition2(() => {
+      setTab2(id)
     })
   }
 
@@ -132,6 +182,24 @@ const AboutSection = () => {
         </div>
         <div className='mt-8'>
           {TAB_DATA.find((t) => t.id === tab).content}
+        </div>
+
+        <div className='flex flex-row justify-center text-2xl mt-8 space-x-20'>
+          <AboutTag
+            selectTab={() => handleTabChange2('hobbies')}
+            active={tab2 === 'hobbies'}
+          >
+            Hobbies
+          </AboutTag>
+          <AboutTag
+            selectTab={() => handleTabChange2('fun fact')}
+            active={tab2 === 'fun fact'}
+          >
+            Fun Fact
+          </AboutTag>
+        </div>
+        <div className='mt-8'>
+          {TAB2_DATA.find((t) => t.id === tab2).content}
         </div>
       </div>
     </section>
