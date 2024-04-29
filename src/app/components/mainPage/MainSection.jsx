@@ -50,18 +50,18 @@ const MainSection = () => {
                 </p>
           <div>
             <Link
-              href={NavToContact}
-              className="relative inline-block px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 text-white hover:text-slate-800 arrow-animate"
-            >
-              Let&apos;s Connect
-            </Link>
-            <Link
               href="https://www.linkedin.com/in/lucas-jingyu-lu/"
-              className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
+              className="relative px-1 inline-block py-1 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 text-white "
             >
               <span className="block bg-[#121212] hover:bg-gray-700 rounded-full px-5 py-2">
                 LinkedIn
               </span>
+            </Link>
+            <Link
+              href={NavToContact}
+              className="relative inline-block px-6 py-3 w-full sm:w-fit rounded-full mr-4 mt-3 bg-gradient-to-br from-primary-500 to-secondary-500 text-white hover:text-slate-800 arrow-animate"
+            >
+              Let&apos;s Connect
             </Link>
           </div>
         </motion.div>

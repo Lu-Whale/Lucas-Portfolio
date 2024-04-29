@@ -90,7 +90,7 @@ const EmailSection = () => {
           </a>
         </div>
       </div>
-      <div>
+      <div className='z-10'>
         {emailSubmitted ? (
           submitFailed ? (
             <div className='flex justify-center mt-8'>
