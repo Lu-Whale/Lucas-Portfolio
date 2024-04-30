@@ -140,7 +140,7 @@ const AboutSection = () => {
   }
 
   return (
-    <section className='text-white mb-30 mt-10' id='about'>
+    <section className='text-white mb-36 mt-10' id='about'>
       <div className='px-4 py-8 xl:px-16 sm:py-16 text-left flex flex-col h-full'>
         <h2
           className='text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-sky-400 text-center text-4xl font-semibold mb-4'>

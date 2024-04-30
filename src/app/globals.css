@@ -2,11 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-#projects, #contact {
-  scroll-margin-top: 160px;
+#projects {
+  scroll-margin-top: 100px;
 }
 #about {
-  scroll-margin-top: 100px;
+  scroll-margin-top: 50px;
+}
+#contact {
+  scroll-margin-top: 50px;
 }
 
 :root {
